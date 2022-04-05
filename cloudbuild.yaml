@@ -17,16 +17,13 @@
 # tag it with the name of the image.
 steps:
 # Build the container image
-- name: 'microsoft/dotnet:sdk'
-  entrypoint: 'dotnet'
+- name: 'gcr.io/cloud-builders/dotnet'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/consoleapp1:$SHORT_SHA', '--tag=gcr.io/$PROJECT_ID/consoleapp1:latest', '.']
 
 # Push the container image to Container Registry
-- name: 'microsoft/dotnet:sdk'
-  entrypoint: 'dotnet'
+- name: 'gcr.io/cloud-builders/dotnet'
   args: ['push', 'gcr.io/$PROJECT_ID/consoleapp1:$SHORT_SHA'] 
-- name: 'microsoft/dotnet:sdk'
-  entrypoint: 'dotnet'
+- name: 'gcr.io/cloud-builders/dotnet'
   args: ['push','gcr.io/$PROJECT_ID/consoleapp1:latest'] 
 
 ## Deploy container image to Cloud Run
