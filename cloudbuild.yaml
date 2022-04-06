@@ -17,7 +17,7 @@
 # tag it with the name of the image.
 steps:
 # Build the container image
-- name: 'mcr.microsoft.com/dotnet/core/aspnet:3.0'
+- name: 'mcr.microsoft.com/dotnet/core/sdk:2.1'
   args: [dotnet test]
   #args: ['build', '--tag=gcr.io/$PROJECT_ID/consoleapp1:$SHORT_SHA', '--tag=gcr.io/$PROJECT_ID/consoleapp1:latest', '.']
 
