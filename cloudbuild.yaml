@@ -18,7 +18,8 @@
 steps:
 # Build the container image
 - name: 'mcr.microsoft.com/dotnet/core/aspnet:3.0'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/consoleapp1:$SHORT_SHA', '--tag=gcr.io/$PROJECT_ID/consoleapp1:latest', '.']
+  args: [dotnet test]
+  #args: ['build', '--tag=gcr.io/$PROJECT_ID/consoleapp1:$SHORT_SHA', '--tag=gcr.io/$PROJECT_ID/consoleapp1:latest', '.']
 
 # Push the container image to Container Registry
 - name: 'mcr.microsoft.com/dotnet/core/aspnet:3.0'
